@@ -3,27 +3,28 @@ require 'pry'
 class Artist
   
   extend Memorable 
+  extend Findable
   
   attr_accessor :name
   attr_reader :songs
 
-  @@artists = []
+  # @@artists = []
 
-  def initialize
-    @@artists << self
-    @songs = []
-  end
+  # def initialize
+  #   @@artists << self
+  #   @songs = []
+  # end
 
-  def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
-  end
+  # def self.find_by_name(name)
+  #   @@artists.detect{|a| a.name == name}
+  # end
 
-  def self.all
-    @@artists
-  end
+  # def self.all
+  #   @@artists
+  # end
 
-  # def self.reset_all
-  #   self.all.clear
+  # # def self.reset_all
+  # #   self.all.clear
   # end
 
   # def self.count
